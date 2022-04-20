@@ -1,16 +1,20 @@
-x = 26
+from random import randint
+x = randint(1, 100)
 p = 1
-z = int(input('Угадай число '))
-if z == x:
-    print('eeeeeeeee nagiiiiiiiib, s 1oy popytky!!!')
-while z != x:
-    p += 1
-    if z > x:
-        print('zagadannoe chislo menshe')
-        z = int(input('poprobuy eshe raz '))
-    if z < x:
-        print('zagadannoe chislo bolshe')
-        z = int(input('poprobuy eshe raz '))
+while True:
+    z = int(input('Угадай число '))
     if z == x:
-        print('eeeeeeeee nagiiiiiiiib')
-        print(f'ty spravylsya so {p} popitky!')
+        print(f'eeeeeeeee nagiiiiiiiib, s {p} oy popytky!!!')
+        g = str(input('poprobuesh eshe raz? '))
+        if g != 'y':
+            break
+    if z != x:
+        p += 1
+        if z > x:
+            print('zagadannoe chislo menshe')
+        if z < x:
+            print('zagadannoe chislo bolshe')
+        if z == x:
+            print('eeeeeeeee nagiiiiiiiib')
+
+
